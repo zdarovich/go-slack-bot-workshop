@@ -25,6 +25,3 @@ go to https://golang.org/dl/
 download and install go1.13.1.windows-386.msi
 go version
 ```
-
-## Join Slack channel
-https://join.slack.com/t/bottesting-workshop/shared_invite/enQtNzg3MjI0MTk2MTc3LWQ2YTBlYWRmYmIwYmYwMDdjOGYxNjdmYzM0ZmY3NzY0OTQxOWFiOTU4ZWQ4ZDNiMTdkZTU1NjY0MzI3YWViODM
