@@ -1,6 +1,7 @@
 package slack
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -62,12 +63,6 @@ func start(token string) (wsurl, id string, err error) {
 // struct serves as both read and write, we include the "Id" field which is
 // required only for writing.
 
-type Message struct {
-	Id      uint64 `json:"id"`
-	Type    string `json:"type"`
-	Channel string `json:"channel"`
-	Text    string `json:"text"`
-}
 
 func GetMessage(ws *websocket.Conn) (m Message, err error) {
 	err = websocket.JSON.Receive(ws, &m)
@@ -79,6 +74,41 @@ var counter uint64
 func PostMessage(ws *websocket.Conn, m Message) error {
 	m.Id = atomic.AddUint64(&counter, 1)
 	return websocket.JSON.Send(ws, m)
+}
+
+func PostBlockMessage(m BlockMessage, token string) error {
+	b, err := json.Marshal(m)
+	if err != nil {
+		return err
+	}
+	cli := &http.Client{}
+	req, err := http.NewRequest("POST", "https://slack.com/api/chat.postMessage", bytes.NewBuffer(b))
+	if err != nil {
+		return err
+	}
+	req.Header.Set("Content-type", "application/json")
+	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
+
+	resp, err := cli.Do(req)
+	if err != nil {
+		return err
+	}
+	body, err := ioutil.ReadAll(resp.Body)
+	resp.Body.Close()
+	if err != nil {
+		return err
+	}
+	var respObj responseRtmStart
+	err = json.Unmarshal(body, &respObj)
+	if err != nil {
+		return err
+	}
+
+	if !respObj.Ok {
+		err = fmt.Errorf("Slack error: %s", respObj.Error)
+		return err
+	}
+	return nil
 }
 
 // Starts a websocket-based Real Time API session and return the websocket

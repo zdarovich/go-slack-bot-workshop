@@ -1,0 +1,17 @@
+{
+  "channel": "section",
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Take a look at this image."
+      },
+      "accessory": {
+        "type": "image",
+        "image_url": "https://api.slack.com/img/blocks/bkb_template_images/palmtree.png",
+        "alt_text": "palm tree"
+      }
+    }
+  ]
+}
