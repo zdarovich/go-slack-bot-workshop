@@ -28,5 +28,5 @@ go version
 
 Presentation
 
-https://talks.godoc.org/github.com/zdarovich/go-slack-bot-workshop/presentation/power.slide#3
+https://talks.godoc.org/github.com/zdarovich/go-slack-bot-workshop/presentation/point.slide#
 
