@@ -3,12 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"log"
-	"net"
 	"net/http"
-	"os"
 )
 
 type NameResponse struct {
@@ -34,8 +31,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var resp NameResponse
-	err = json.Unmarshal(body, &resp)
+	var response NameResponse
+	err = json.Unmarshal(body, &response)
 	if err != nil {
 		log.Fatal(err)
 	}

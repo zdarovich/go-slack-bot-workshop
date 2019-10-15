@@ -1,5 +1,6 @@
 Slack bot
 Random user generator
+
 Aleksander Belov
 
 
@@ -19,7 +20,6 @@ This code lab is divided into 4 exercises. Each exercise builds on the previous 
 
 Final code is available in "go-slack-bot-workshop" repository
 
-
 * Vital resources
 
 Visit
@@ -30,8 +30,7 @@ for code samples
 
 These slides are available at:
 
-.link https://talks.godoc.org/github.com/zdarovich/go-slack-bot-workshop/talk.slide
-
+.link https://talks.godoc.org/github.com/zdarovich/go-slack-bot-workshop/show.slide
 
 * Part 1: reading and writing JSON
 
