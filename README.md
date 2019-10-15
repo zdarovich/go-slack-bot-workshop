@@ -26,4 +26,7 @@ download and install go1.13.1.windows-386.msi
 go version
 ```
 
+Presentation
+
+https://talks.godoc.org/github.com/zdarovich/go-slack-bot-workshop/presentation/power.slide#3
 
