@@ -12,7 +12,6 @@ type Message struct {
 	Channel string `json:"channel"`
 	Text    string `json:"text"`
 }
-
 const stream = `
 	{
 	  "id": 0,
@@ -21,15 +20,11 @@ const stream = `
 	  "text": "palm tree"
 	}
 `
-
 func main() {
 	var response Message
 	err := json.Unmarshal([]byte(stream), response)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(response.Id)
-	fmt.Println(response.Type)
-	fmt.Println(response.Channel)
-	fmt.Println(response.Text)
+	fmt.Println(response)
 }

@@ -1,7 +1,7 @@
 Slack bot
 Random user generator
 
-Aleksander Belov
+
 
 
 * Introduction
@@ -9,6 +9,34 @@ Aleksander Belov
 This code lab demonstrates slack bot programming with Go.
 
 The final goal is to build a slack bot that generates random users in chat.
+
+* Pre-requisites
+
+Install Golang 1.13
+Macos
+shell script:
+    curl -o golang.pkg https://dl.google.com/go/go1.13.1.darwin-amd64.pkg
+    sudo open golang.pkg
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/Projects/Proj1
+    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+    go version
+
+Ubuntu
+shell script:
+    wget https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
+    sudo tar -xvf go1.13.1.linux-amd64.tar.gz
+    sudo mv go /usr/local
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/Projects/Proj1
+    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+    go version
+
+Windows
+
+.link https://golang.org/dl/
+download and install go1.13.1.windows-386.msi
+    go version
 
 * Design overview
 
@@ -59,10 +87,10 @@ Messages are sent as JSON objects like this:
 Which corresponds to a Go data structure like this:
 
 	type Message struct {
-    	Name    string `json:"name"`
-    	Surname string `json:"surname"`
-    	Gender  string `json:"gender"`
-    	Region  string `json:"region"`
+    Name    string `json:"name"`
+    Surname string `json:"surname"`
+    Gender  string `json:"gender"`
+    Region  string `json:"region"`
     }
 
 * Decoding JSON
@@ -121,6 +149,15 @@ This server reads data from a connection and echoes it back:
 .play talk/code/wss.go /func main/,$
 
 * Part 4: Running code in parallel
+
+- goroutines allow executing tasks in parallel
+- channels allow goroutines to communicate
+
+* Go philosophy
+
+Do not communicate by sharing memory; instead, share memory by communicating.
+
+Rob Pike
 
 * Goroutines
 
