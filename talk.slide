@@ -1,16 +1,13 @@
-Whispering Gophers
-Network programming in Go
-
-Andrew Gerrand
-
-Francesc Campoy
+Slack bot
+Random user generator
+Aleksander Belov
 
 
 * Introduction
 
-This code lab demonstrates network programming with Go.
+This code lab demonstrates slack bot programming with Go.
 
-The final goal is to build a "whispernet": a peer to peer mesh network for transmitting text messages.
+The final goal is to build a slack bot that generates random users in chat.
 
 
 * Design overview
@@ -20,42 +17,31 @@ The final goal is to build a "whispernet": a peer to peer mesh network for trans
 
 * Pre-requisites
 
-You must have these tools installed and working:
+Install Golang 1.13
+Macos
+shell script:
+    curl -o golang.pkg https://dl.google.com/go/go1.13.1.darwin-amd64.pkg
+    sudo open golang.pkg
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/Projects/Proj1
+    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+    go version
 
-- Go (see [[http://golang.org/doc/install]])
-- git (see [[https://git-scm.com/downloads]])
+Ubuntu
+shell script:
+    wget https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz
+    sudo tar -xvf go1.13.1.linux-amd64.tar.gz
+    sudo mv go /usr/local
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/Projects/Proj1
+    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+    go version
 
-This is not an introduction to the Go Programming Language;
-*some*experience*writing*Go*code*is*required*. To learn Go:
+Windows
 
-- Take [[http://tour.golang.org][A Tour of Go]]
-- Check out the [[http://golang.org/doc][Go documentation]]
-
-Create a workspace (see [[http://golang.org/doc/code.html]]) and install the support libraries:
-
-	$ go get github.com/campoy/whispering-gophers/hello
-	$ $GOPATH/bin/hello
-	It works!
-
-
-* Creating a workspace
-
-To write Go code you need a workspace.  Create one now if you have not already.
-
-	$ mkdir $HOME/gocode
-	$ export GOPATH=$HOME/gocode   # or add this to ~/.profile
-
-Build and install a `hello` example program:
-
-	$ go get github.com/campoy/whispering-gophers/hello
-
-This installs the `hello` binary to `$GOPATH/bin`.
-
-Check that this worked:
-
-	$ $GOPATH/bin/hello
-	It works!
-
+.link https://golang.org/dl/
+download and install go1.13.1.windows-386.msi
+    go version
 
 * The exercises
 
