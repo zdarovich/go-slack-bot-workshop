@@ -40,7 +40,9 @@ shell script:
 Windows
 
 .link https://golang.org/dl/
+
 download and install go1.13.1.windows-386.msi
+
     go version
 
 * The exercises
@@ -158,7 +160,6 @@ This server reads data from a connection and echoes it back:
 Goroutines are lightweight threads that are managed by the Go runtime. To run a function in a new goroutine, just put `"go"` before the function call.
 
 .play talk/code/goroutines.go
-
 
 * Channels
 

@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4cd4ad4-8455-480e-8565-5700e2fd9e66" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/bot/util.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talk/code/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/talk/code/wss.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/mybot.go" beforeDir="false" afterPath="$PROJECT_DIR$/bot/mybot.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/nameApi.go" beforeDir="false" afterPath="$PROJECT_DIR$/bot/nameApi.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/slack/util.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/talk.slide" beforeDir="false" afterPath="$PROJECT_DIR$/talk.slide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/bufio.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/fanout.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/flag.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/io/io.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/json-decode.go" beforeDir="false" afterPath="$PROJECT_DIR$/talk/code/json-decode.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/json-encode.go" beforeDir="false" afterPath="$PROJECT_DIR$/talk/code/json-encode.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/listen-addr-util.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/listen-addr.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/listen.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/randomid.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/reader.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/register.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/code/select.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/diag-part1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/diag-part2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/diag-part3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/diag-part4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/diag-part7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/graffle/diag-overview.graffle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/graffle/diag-part1.graffle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/graffle/diag-part2.graffle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/graffle/diag-part3.graffle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/graffle/diag-part4.graffle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talk/img/graffle/diag-part7.graffle" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
