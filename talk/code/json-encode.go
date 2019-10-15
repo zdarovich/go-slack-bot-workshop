@@ -2,26 +2,24 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
-	"os"
 )
 
-type Site struct {
-	Title string
-	URL   string
-}
-
-var sites = []Site{
-	{"The Go Programming Language", "http://golang.org"},
-	{"Google", "http://google.com"},
+type Response struct {
+	Name    string `json:"name"`
+	Surname string `json:"surname"`
+	Gender  string `json:"gender"`
+	Region  string `json:"region"`
 }
 
 func main() {
-	enc := json.NewEncoder(os.Stdout)
-	for _, s := range sites {
-		err := enc.Encode(s)
-		if err != nil {
-			log.Fatal(err)
-		}
+	msg := Response{Name:"Nicolaie", Surname:"Timofti", Gender:"male", Region:"Romania"}
+
+	if b, err := json.Marshal(msg); err != nil {
+		log.Fatal(err)
+
+	} else {
+		fmt.Println(string(b))
 	}
 }

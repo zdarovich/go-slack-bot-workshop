@@ -1,11 +1,14 @@
-package bot
+package main
 
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
+	"net"
 	"net/http"
+	"os"
 )
 
 type NameResponse struct {
@@ -15,31 +18,26 @@ type NameResponse struct {
 	Region  string `json:"region"`
 }
 
-func getRandomName() string {
-	log.Println("get random name")
+func main() {
 	cli := &http.Client{}
 	req, err := http.NewRequest("GET", "https://uinames.com/api/", nil)
 	if err != nil {
 		log.Fatal(err)
-		return ""
 	}
 
 	resp, err := cli.Do(req)
 	if err != nil {
 		log.Fatal(err)
-		return ""
 	}
 	body, err := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	if err != nil {
 		log.Fatal(err)
-		return ""
 	}
-	var respObj NameResponse
-	err = json.Unmarshal(body, &respObj)
+	var resp NameResponse
+	err = json.Unmarshal(body, &resp)
 	if err != nil {
 		log.Fatal(err)
-		return ""
 	}
-	return fmt.Sprintf("%s %s", respObj.Name, respObj.Surname)
+	fmt.Println(resp)
 }

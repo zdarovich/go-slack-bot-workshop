@@ -1,5 +1,6 @@
 package slack
 
+// block message type in slack
 func NewBlock(name, url string) BlockMessage {
 	blocks := make([]Block, 1)
 	blocks[0] = Block{

@@ -4,26 +4,32 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"strings"
 )
 
-type Site struct {
-	Title string
-	URL   string
+type Message struct {
+	Id      uint64 `json:"id"`
+	Type    string `json:"type"`
+	Channel string `json:"channel"`
+	Text    string `json:"text"`
 }
 
 const stream = `
-	{"Title": "The Go Programming Language", "URL": "http://golang.org"}
-	{"Title": "Google", "URL": "http://google.com"}
+	{
+	  "id": 0,
+	  "type": "message",
+	  "channel": "dasdas",
+	  "text": "palm tree"
+	}
 `
 
 func main() {
-	dec := json.NewDecoder(strings.NewReader(stream))
-	for {
-		var s Site
-		if err := dec.Decode(&s); err != nil {
-			log.Fatal(err)
-		}
-		fmt.Println(s.Title, s.URL)
+	var response Message
+	err := json.Unmarshal([]byte(stream), response)
+	if err != nil {
+		log.Fatal(err)
 	}
+	fmt.Println(response.Id)
+	fmt.Println(response.Type)
+	fmt.Println(response.Channel)
+	fmt.Println(response.Text)
 }
