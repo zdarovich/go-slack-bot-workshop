@@ -2,9 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4cd4ad4-8455-480e-8565-5700e2fd9e66" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/talk/code/bufio.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/chan.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/dial.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/fanout.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/flag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/goroutines.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/io/io.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/json-decode.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/json-encode.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/listen-addr-util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/listen-addr.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/listen-single.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/listen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/lock.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/randomid.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/reader.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/register.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/code/select.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/diag-overview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/diag-part1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/diag-part2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/diag-part3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/diag-part4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/diag-part7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/graffle/diag-overview.graffle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/graffle/diag-part1.graffle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/graffle/diag-part2.graffle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/graffle/diag-part3.graffle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/graffle/diag-part4.graffle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/talk/img/graffle/diag-part7.graffle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/mybot.go" beforeDir="false" afterPath="$PROJECT_DIR$/bot/mybot.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
