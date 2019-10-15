@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4cd4ad4-8455-480e-8565-5700e2fd9e66" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/go-slack-bot-workshop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/nameApi.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/pictureApi.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/block_message.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/message.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/random_name.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/random_pic.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slack/blockMessage.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slack/message.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slack/util.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mybot.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/mybot.go" beforeDir="false" afterPath="$PROJECT_DIR$/bot/mybot.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slack/slack.go" beforeDir="false" afterPath="$PROJECT_DIR$/slack/slack.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/zdarovich/go-slack-bot-workshop/slack"
 	"strings"
+	"time"
 )
 
 type bot struct {
@@ -17,6 +18,9 @@ func New(token string) *bot {
 }
 
 func (b *bot) Start() {
+
+	msgChan := make(chan string, 0)
+	defer close(msgChan)
 
 	// start a websocket-based Real Time API session
 	ws, id := slack.Connect(b.token)
@@ -35,18 +39,31 @@ func (b *bot) Start() {
 			// if so try to parse if
 			parts := strings.Fields(m.Text)
 
-			if len(parts) == 2 && parts[1] == "pic" {
+			if len(parts) == 3 && parts[1] == "pic" && parts[2] == "seq"{
+				start := time.Now()
+				name, url := generateUserSequential()
+				after := time.Since(start)
+				fmt.Printf("time elapsed %s \n", after)
 
-				go func(m slack.Message) {
-					name, url := generateUser()
-					msg := slack.NewBlock(name, url)
-					msg.Channel = m.Channel
-					if err := slack.PostBlockMessage(msg, b.token); err != nil {
-						fmt.Println(err)
-						return
-					}
 
-				}(m)
+				msg := slack.NewBlock(name, url)
+				msg.Channel = m.Channel
+				if err := slack.PostBlockMessage(msg, b.token); err != nil {
+					fmt.Println(err)
+					return
+				}
+
+			} else if len(parts) == 3 && parts[1] == "pic" && parts[2] == "par" {
+				start := time.Now()
+				name, url := generateUserParallel()
+				after := time.Since(start)
+				fmt.Printf("time elapsed %s \n", after)
+				msg := slack.NewBlock(name, url)
+				msg.Channel = m.Channel
+				if err := slack.PostBlockMessage(msg, b.token); err != nil {
+					fmt.Println(err)
+					return
+				}
 
 			} else {
 
@@ -55,17 +72,34 @@ func (b *bot) Start() {
 					fmt.Println(err)
 					return
 				}
+
 			}
 		}
 	}
 }
 
-func generateUserSequentially() (string, string) {
+func generateUserSequential() (string, string) {
 	name := getRandomName()
-	url := getRandomPictureUrl()
-	return name, url
+	pic := getRandomPictureUrl()
+	return name, pic
 }
 
-func generateUser() (string, string) {
+func generateUserParallel() (string, string) {
+	nameChan := make(chan string)
+	picChan := make(chan string)
 
+	go func() {
+		name := getRandomName()
+		nameChan <- name
+	}()
+
+	go func() {
+		pic := getRandomPictureUrl()
+		picChan <- pic
+	}()
+
+	name := <-nameChan
+	pic := <-picChan
+
+	return name, pic
 }
