@@ -65,9 +65,17 @@ func start(token string) (wsurl, id string, err error) {
 
 
 func GetMessage(ws *websocket.Conn) (m Message, err error) {
+
 	err = websocket.JSON.Receive(ws, &m)
 	return
 }
+
+func GetMessageExplicit(ws *websocket.Conn) (Message, error) {
+	m := new(Message)
+	err := websocket.JSON.Receive(ws, m)
+	return *m, err
+}
+
 
 var counter uint64
 

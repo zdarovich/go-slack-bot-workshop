@@ -61,18 +61,14 @@ func (b *bot) Start() {
 					return
 				}
 				break
+			default:
+				m.Text = fmt.Sprintf("sorry, that does not compute")
+				if err := slack.PostMessage(ws, m); err != nil {
+					log.Fatal(err)
+					return
+				}
 
 			}
-
-
-		} else {
-
-			m.Text = fmt.Sprintf("sorry, that does not compute")
-			if err := slack.PostMessage(ws, m); err != nil {
-				log.Fatal(err)
-				return
-			}
-
 		}
 	}
 }

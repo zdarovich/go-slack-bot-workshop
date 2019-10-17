@@ -22,7 +22,7 @@ const stream = `
 `
 func main() {
 	var response Message
-	err := json.Unmarshal([]byte(stream), response)
+	err := json.Unmarshal([]byte(stream), &response)
 	if err != nil {
 		log.Fatal(err)
 	}

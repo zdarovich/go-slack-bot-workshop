@@ -3,17 +3,22 @@ Random user generator
 
 
 
+* Go 1.13 installation
+.link https://github.com/zdarovich/go-slack-bot-workshop/blob/master/README.md
+
+* Vital resources
+
+Visit
+
+.link https://github.com/zdarovich/go-slack-bot-workshop
+
+for code samples
 
 * Introduction
 
 This code lab demonstrates slack bot programming with Go.
 
 The final goal is to build a slack bot that generates random users in chat.
-
-* Go 1.13 installation
-.link https://github.com/zdarovich/go-slack-bot-workshop/blob/master/README.md
-
-
 
 * Design overview
 
@@ -24,15 +29,6 @@ The final goal is to build a slack bot that generates random users in chat.
 This code lab is divided into 4 exercises. Each exercise builds on the previous one.
 
 Final code is available in "go-slack-bot-workshop" repository
-
-* Vital resources
-
-Visit
-
-.link https://github.com/zdarovich/go-slack-bot-workshop
-
-for code samples
-
 
 * Part 1: reading and writing JSON
 
@@ -155,12 +151,7 @@ Mutexes are a simple means to protect shared state from concurrent access.
 
 .play talk/code/lock.go /START/,/END/
 
-*
-
-
-Lets build slack bot
-
-
+* Let's build slack bot
 
 * 1. Define project structure
 
@@ -186,4 +177,9 @@ Lets build slack bot
 
 - Bot engine
 .link https://codeshare.io/2KD1jK
+
+* 4. Read config
+
+- Read config.json file
+.link https://codeshare.io/29nEvV
 
